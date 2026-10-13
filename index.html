@@ -196,7 +196,7 @@
                     <h3 class="font-bold text-slate-800 text-sm mt-0.5">超級任天堂世界 & 哈利波特</h3>
                     <div class="text-xs text-slate-600 mt-2 space-y-1.5 leading-relaxed">
                         <p>◆ <strong>超級任天堂世界：</strong>入園先確認 App 整理券。推薦必玩瑪利歐賽車、庫巴挑戰書、敲磚拿金幣。</p>
-                        <p>◆ <strong>奇諾比奧咖啡店：</strong>入園先抽取預約券，享用可愛主題餐點。</p>
+                        <p>◆ <strong>奇諾比奧咖啡店：</strong>入園先抽取預預約券，享用可愛主題餐點。</p>
                         <p>◆ <strong>哈利波特：</strong>造訪活米村、體驗禁忌之旅、喝奶油啤酒。</p>
                     </div>
                 </div>
@@ -338,59 +338,123 @@
                 <div class="flex justify-between items-center border-b pb-3 mb-3">
                     <div>
                         <h2 class="font-bold text-slate-800 text-base flex items-center gap-1.5">
-                            <i class="fa-solid fa-qrcode text-blue-600"></i> 環球影城門票 QR Code
+                            <i class="fa-solid fa-qrcode text-blue-600"></i> 環球影城門票 & 憑證
                         </h2>
                         <p class="text-[11px] text-slate-500 mt-0.5">📅 入園日期：2026.11.05 (四)</p>
                     </div>
                     <span class="bg-blue-100 text-blue-800 text-[11px] font-bold px-2.5 py-1 rounded-full">4人電子票</span>
                 </div>
 
-                <div class="grid grid-cols-1 gap-4">
-                    <!-- Ticket 1 -->
-                    <div class="border rounded-2xl overflow-hidden shadow-xs bg-slate-50">
-                        <div class="bg-blue-600 text-white px-4 py-2 font-bold text-xs flex justify-between items-center">
-                            <span>TSENG FANHAO</span>
-                            <span class="bg-blue-800 px-2 py-0.5 rounded text-[10px]">大人</span>
-                        </div>
-                        <div class="p-4 flex flex-col items-center bg-white">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=1M6KK0DQXBBCMK" alt="Ticket QR" class="w-48 h-48 object-contain my-1">
-                            <div class="text-xs font-mono font-bold bg-slate-100 px-3 py-1 rounded-full mt-2">票號: 1M6KK0DQXBBCMK</div>
-                        </div>
-                    </div>
-
-                    <!-- Ticket 2 -->
+                <div class="grid grid-cols-1 gap-5">
+                    <!-- Ticket 1: CHENG YUYEN -->
                     <div class="border rounded-2xl overflow-hidden shadow-xs bg-slate-50">
                         <div class="bg-blue-600 text-white px-4 py-2 font-bold text-xs flex justify-between items-center">
                             <span>CHENG YUYEN</span>
                             <span class="bg-blue-800 px-2 py-0.5 rounded text-[10px]">大人</span>
                         </div>
-                        <div class="p-4 flex flex-col items-center bg-white">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=1M6KK0DQXBBCM0" alt="Ticket QR" class="w-48 h-48 object-contain my-1">
-                            <div class="text-xs font-mono font-bold bg-slate-100 px-3 py-1 rounded-full mt-2">票號: 1M6KK0DQXBBCM0</div>
+                        <div class="p-3 bg-white space-y-3">
+                            <div class="grid grid-cols-2 gap-2">
+                                <a href="https://drive.google.com/file/d/1Eld3EtKohbDQNcHhko4P8NMMJMv9D0TI/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1 bg-blue-50 text-blue-600 border border-blue-200 py-1.5 rounded-lg text-[11px] font-bold">
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> 門票照片 1
+                                </a>
+                                <a href="https://drive.google.com/file/d/1M4rJtsx_2_EdSQnKcV8R9kOcwmaeqDB8/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1 bg-blue-50 text-blue-600 border border-blue-200 py-1.5 rounded-lg text-[11px] font-bold">
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> 門票照片 2
+                                </a>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 pt-1 border-t">
+                                <div class="text-center">
+                                    <span class="text-[10px] text-slate-400 font-bold block mb-1">圖檔 1 (點擊放大)</span>
+                                    <img src="https://lh3.googleusercontent.com/d/1Eld3EtKohbDQNcHhko4P8NMMJMv9D0TI" alt="CHENG YUYEN Ticket 1" onclick="openModal(this.src)" class="w-full h-32 object-contain bg-slate-100 rounded-lg border cursor-pointer hover:opacity-90 transition">
+                                </div>
+                                <div class="text-center">
+                                    <span class="text-[10px] text-slate-400 font-bold block mb-1">圖檔 2 (點擊放大)</span>
+                                    <img src="https://lh3.googleusercontent.com/d/1M4rJtsx_2_EdSQnKcV8R9kOcwmaeqDB8" alt="CHENG YUYEN Ticket 2" onclick="openModal(this.src)" class="w-full h-32 object-contain bg-slate-100 rounded-lg border cursor-pointer hover:opacity-90 transition">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Ticket 3 -->
+                    <!-- Ticket 2: TSENG FANHAO -->
+                    <div class="border rounded-2xl overflow-hidden shadow-xs bg-slate-50">
+                        <div class="bg-blue-600 text-white px-4 py-2 font-bold text-xs flex justify-between items-center">
+                            <span>TSENG FANHAO</span>
+                            <span class="bg-blue-800 px-2 py-0.5 rounded text-[10px]">大人</span>
+                        </div>
+                        <div class="p-3 bg-white space-y-3">
+                            <div class="grid grid-cols-2 gap-2">
+                                <a href="https://drive.google.com/file/d/16xIAutO2Dr5ZsWcf9HJXg0K-yTnU_WtK/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1 bg-blue-50 text-blue-600 border border-blue-200 py-1.5 rounded-lg text-[11px] font-bold">
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> 門票照片 1
+                                </a>
+                                <a href="https://drive.google.com/file/d/19kocN5mQ5ExjBh8nlnz_2MhRu4izFJtu/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1 bg-blue-50 text-blue-600 border border-blue-200 py-1.5 rounded-lg text-[11px] font-bold">
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> 門票照片 2
+                                </a>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 pt-1 border-t">
+                                <div class="text-center">
+                                    <span class="text-[10px] text-slate-400 font-bold block mb-1">圖檔 1 (點擊放大)</span>
+                                    <img src="https://lh3.googleusercontent.com/d/16xIAutO2Dr5ZsWcf9HJXg0K-yTnU_WtK" alt="TSENG FANHAO Ticket 1" onclick="openModal(this.src)" class="w-full h-32 object-contain bg-slate-100 rounded-lg border cursor-pointer hover:opacity-90 transition">
+                                </div>
+                                <div class="text-center">
+                                    <span class="text-[10px] text-slate-400 font-bold block mb-1">圖檔 2 (點擊放大)</span>
+                                    <img src="https://lh3.googleusercontent.com/d/19kocN5mQ5ExjBh8nlnz_2MhRu4izFJtu" alt="TSENG FANHAO Ticket 2" onclick="openModal(this.src)" class="w-full h-32 object-contain bg-slate-100 rounded-lg border cursor-pointer hover:opacity-90 transition">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ticket 3: CHENG YUCHIEN -->
                     <div class="border rounded-2xl overflow-hidden shadow-xs bg-slate-50">
                         <div class="bg-blue-600 text-white px-4 py-2 font-bold text-xs flex justify-between items-center">
                             <span>CHENG YUCHIEN</span>
                             <span class="bg-blue-800 px-2 py-0.5 rounded text-[10px]">大人</span>
                         </div>
-                        <div class="p-4 flex flex-col items-center bg-white">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=183D42U8EP8Q5V" alt="Ticket QR" class="w-48 h-48 object-contain my-1">
-                            <div class="text-xs font-mono font-bold bg-slate-100 px-3 py-1 rounded-full mt-2">票號: 183D42U8EP8Q5V</div>
+                        <div class="p-3 bg-white space-y-3">
+                            <div class="grid grid-cols-2 gap-2">
+                                <a href="https://drive.google.com/file/d/1YdRn5GVV4kdTP0P_hiRFKv8-kCX-tGd_/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1 bg-blue-50 text-blue-600 border border-blue-200 py-1.5 rounded-lg text-[11px] font-bold">
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> 門票照片 1
+                                </a>
+                                <a href="https://drive.google.com/file/d/1jz4-HxkNiBOTAOUVPnymHpnQ_3AEzAZk/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1 bg-blue-50 text-blue-600 border border-blue-200 py-1.5 rounded-lg text-[11px] font-bold">
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> 門票照片 2
+                                </a>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 pt-1 border-t">
+                                <div class="text-center">
+                                    <span class="text-[10px] text-slate-400 font-bold block mb-1">圖檔 1 (點擊放大)</span>
+                                    <img src="https://lh3.googleusercontent.com/d/1YdRn5GVV4kdTP0P_hiRFKv8-kCX-tGd_" alt="CHENG YUCHIEN Ticket 1" onclick="openModal(this.src)" class="w-full h-32 object-contain bg-slate-100 rounded-lg border cursor-pointer hover:opacity-90 transition">
+                                </div>
+                                <div class="text-center">
+                                    <span class="text-[10px] text-slate-400 font-bold block mb-1">圖檔 2 (點擊放大)</span>
+                                    <img src="https://lh3.googleusercontent.com/d/1jz4-HxkNiBOTAOUVPnymHpnQ_3AEzAZk" alt="CHENG YUCHIEN Ticket 2" onclick="openModal(this.src)" class="w-full h-32 object-contain bg-slate-100 rounded-lg border cursor-pointer hover:opacity-90 transition">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Ticket 4 -->
+                    <!-- Ticket 4: TSENG PINCHENG (兒童) -->
                     <div class="border rounded-2xl overflow-hidden shadow-xs bg-slate-50">
                         <div class="bg-emerald-600 text-white px-4 py-2 font-bold text-xs flex justify-between items-center">
                             <span>TSENG PINCHENG</span>
                             <span class="bg-emerald-800 px-2 py-0.5 rounded text-[10px]">子ども</span>
                         </div>
-                        <div class="p-4 flex flex-col items-center bg-white">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=1G5HEQWWSTAUFS" alt="Ticket QR" class="w-48 h-48 object-contain my-1">
-                            <div class="text-xs font-mono font-bold bg-slate-100 px-3 py-1 rounded-full mt-2">票號: 1G5HEQWWSTAUFS</div>
+                        <div class="p-3 bg-white space-y-3">
+                            <div class="grid grid-cols-2 gap-2">
+                                <a href="https://drive.google.com/file/d/1Hfa7824UuNj0Woyp4rcDbhNqF8wjC_Fl/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1 bg-emerald-50 text-emerald-700 border border-emerald-200 py-1.5 rounded-lg text-[11px] font-bold">
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> 門票照片 1
+                                </a>
+                                <a href="https://drive.google.com/file/d/1fXLSugtH-6O5ArcA_a0F261ps_MSeY6c/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1 bg-emerald-50 text-emerald-700 border border-emerald-200 py-1.5 rounded-lg text-[11px] font-bold">
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> 門票照片 2
+                                </a>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 pt-1 border-t">
+                                <div class="text-center">
+                                    <span class="text-[10px] text-slate-400 font-bold block mb-1">圖檔 1 (點擊放大)</span>
+                                    <img src="https://lh3.googleusercontent.com/d/1Hfa7824UuNj0Woyp4rcDbhNqF8wjC_Fl" alt="TSENG PINCHENG Ticket 1" onclick="openModal(this.src)" class="w-full h-32 object-contain bg-slate-100 rounded-lg border cursor-pointer hover:opacity-90 transition">
+                                </div>
+                                <div class="text-center">
+                                    <span class="text-[10px] text-slate-400 font-bold block mb-1">圖檔 2 (點擊放大)</span>
+                                    <img src="https://lh3.googleusercontent.com/d/1fXLSugtH-6O5ArcA_a0F261ps_MSeY6c" alt="TSENG PINCHENG Ticket 2" onclick="openModal(this.src)" class="w-full h-32 object-contain bg-slate-100 rounded-lg border cursor-pointer hover:opacity-90 transition">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -408,11 +472,18 @@
                     <p class="text-xs text-blue-600 font-semibold mt-0.5">📞 +81 080-3259-3409</p>
                 </div>
 
-                <!-- Google Drive 憑證 -->
-                <a href="https://drive.google.com/file/d/15BY-M9gO3WVX27qqvn_44_cIg2ZTBEcW/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3 bg-red-50 text-red-600 border border-red-200 rounded-xl text-xs font-bold">
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-file-pdf text-red-500 text-sm"></i> 查看 Google Drive 訂房憑證</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                </a>
+                <!-- Google Drive 憑證 & 照片開啟按鈕 -->
+                <div class="space-y-2">
+                    <a href="https://drive.google.com/file/d/15BY-M9gO3WVX27qqvn_44_cIg2ZTBEcW/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3 bg-red-50 text-red-600 border border-red-200 rounded-xl text-xs font-bold">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-file-pdf text-red-500 text-sm"></i> 查看 Google Drive 訂房憑證</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                    
+                    <a href="https://drive.google.com/file/d/1el7H76Ly6GEy1FHAINElGUYgXG9Fj92N/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3 bg-amber-50 text-amber-700 border border-amber-200 rounded-xl text-xs font-bold">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-image text-amber-600 text-sm"></i> 查看 Google Drive 住宿報到照片</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
 
                 <!-- Check-in / Out 點卡 -->
                 <div class="grid grid-cols-2 gap-2 text-xs">
@@ -445,13 +516,13 @@
                     </div>
                 </div>
 
-                <!-- HOTEL SMART QR Code -->
+                <!-- 住宿照片 Preview -->
                 <div class="pt-3 border-t text-center space-y-2">
-                    <div class="text-xs font-bold text-slate-700">HOTEL SMART 簽到 QR Code</div>
-                    <div class="p-3 border rounded-xl bg-white inline-block shadow-xs">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=CHECKIN-339842-ESLEAD-NAMBA" alt="Checkin QR" class="w-44 h-44 object-contain">
+                    <div class="text-xs font-bold text-slate-700">HOTEL SMART 報到照片 (點擊放大)</div>
+                    <div class="p-2 border rounded-xl bg-slate-50 inline-block shadow-xs max-w-full">
+                        <img src="https://lh3.googleusercontent.com/d/1el7H76Ly6GEy1FHAINElGUYgXG9Fj92N" alt="Hotel Smart Checkin" onclick="openModal(this.src)" class="w-full max-h-60 object-contain rounded-lg cursor-pointer hover:opacity-90 transition">
                     </div>
-                    <p class="text-[11px] text-slate-400">可在飯店平板直接掃描此碼或輸入 339842 辦理入住</p>
+                    <p class="text-[11px] text-slate-400">點擊照片可放大查看細節，或使用上方按鈕開啟雲端原圖</p>
                 </div>
             </div>
         </section>

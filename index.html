@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>2026 大阪之旅</title>
+    <!-- Web App Manifest 設定 (離線與安裝支援) -->
+    <link rel="manifest" href="data:application/manifest+json;charset=utf-8,%7B%22name%22%3A%222026%E5%A4%A7%E9%98%AA%E4%B9%8B%E6%97%85%22%2C%22short_name%22%3A%22%E5%A4%A7%E9%98%AA%E4%B9%8B%E6%97%85%22%2C%22start_url%22%3A%22.%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23f1f5f9%22%2C%22theme_color%22%3A%22%239f1239%22%7D">
+    <meta name="theme-color" content="#9f1239">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="2026大阪之旅">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -142,8 +149,7 @@
                             💡 空港急行/普通車：刷 IC 卡全車自由席<br>
                             💡 特急 Rapi:t：需劃位指定席
                         </p>
-                        <p><strong>【路線 1】</strong>南海機場線 ➔ 天下茶屋轉堺筋線 ➔ 惠美須町站 </p>
-                                         (3號出口電梯/4號出口樓梯)</p>
+                        <p><strong>【路線 1】</strong>南海機場線 ➔ 天下茶屋轉堺筋線 ➔ 惠美須町站 (3號出口電梯/4號出口樓梯)</p>
                         <p><strong>【路線 2】</strong>南海機場線 ➔ 天下茶屋轉高野線 ➔ 今宮戎站 (步行 270m)</p>
                     </div>
                 </div>
@@ -485,7 +491,7 @@
                     <p>🚗 <strong>回程：</strong>抵達桃園 T1 後搭乘巡迴巴士回 P4 停車場取車返回苗栗。</p>
                 </div>
 
-                <!-- 新增：航廈巡迴巴士候車地點詳細說明 -->
+                <!-- 航廈巡迴巴士候車地點詳細說明 -->
                 <div class="bg-blue-50/80 p-3.5 rounded-xl border border-blue-100 text-xs text-blue-950 space-y-2 mt-2">
                     <div class="font-bold text-blue-900 flex items-center gap-1.5">
                         <i class="fa-solid fa-location-dot text-blue-600"></i> 桃園機場航廈巡迴巴士候車點
@@ -691,6 +697,46 @@
                 document.getElementById('countdown').innerText = "旅程進行中🎉";
             }
         }, 1000);
+
+        // 註冊 Service Worker (離線快取功能)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                const swCode = `
+                    const CACHE_NAME = 'osaka-2026-v1';
+                    self.addEventListener('install', (e) => {
+                        e.waitUntil(
+                            caches.open(CACHE_NAME).then((cache) => {
+                                return cache.addAll([
+                                    './',
+                                    'https://cdn.tailwindcss.com',
+                                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
+                                    'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap'
+                                ]);
+                            })
+                        );
+                    });
+
+                    self.addEventListener('fetch', (e) => {
+                        e.respondWith(
+                            caches.match(e.request).then((res) => {
+                                return res || fetch(e.request).then((response) => {
+                                    return caches.open(CACHE_NAME).then((cache) => {
+                                        cache.put(e.request, response.clone());
+                                        return response;
+                                    });
+                                });
+                            }).catch(() => caches.match('./'))
+                        );
+                    });
+                `;
+                const blob = new Blob([swCode], { type: 'application/javascript' });
+                const blobUrl = URL.createObjectURL(blob);
+
+                navigator.serviceWorker.register(blobUrl)
+                    .then(reg => console.log('離線快取 Service Worker 註冊成功！'))
+                    .catch(err => console.log('Service Worker 註冊失敗:', err));
+            });
+        }
     </script>
 </body>
 </html>

@@ -66,11 +66,11 @@
                 <h1 class="text-xl font-bold flex items-center gap-1.5 tracking-wide text-white drop-shadow-md">2026 大阪之旅 🏯</h1>
             </div>
             <!-- 出發倒數 Badge (加大樣式) -->
-            <div class="bg-black/40 backdrop-blur-md border border-white/30 rounded-2xl px-3.5 py-1.5 text-right shadow-lg">
+            <div class="bg-black/40 backdrop-blur-md border border-white/30 rounded-2xl px-3 py-1.5 text-right shadow-lg">
                 <div class="text-[10px] text-rose-200 font-medium flex items-center justify-end gap-1">
                     <i class="fa-regular fa-clock text-[9px]"></i> 距出發剩
                 </div>
-                <div id="countdown" class="text-lg font-black font-mono text-amber-300 tracking-tight mt-0.5 drop-shadow">計算中...</div>
+                <div id="countdown" class="text-sm font-black font-mono text-amber-300 tracking-tight mt-0.5 drop-shadow">計算中...</div>
             </div>
         </div>
         <!-- 航班微型資訊 Bar -->
@@ -149,7 +149,8 @@
                             💡 空港急行/普通車：刷 IC 卡全車自由席<br>
                             💡 特急 Rapi:t：需劃位指定席
                         </p>
-                        <p><strong>【路線 1】</strong>南海機場線 ➔ 天下茶屋轉堺筋線 ➔ 惠美須町站 (3號出口電梯/4號出口樓梯)</p>
+                        <p><strong>【路線 1】</strong>南海機場線 ➔ 天下茶屋轉堺筋線 ➔ 惠美須町站 <br/>   
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp(3號出口電梯/4號出口樓梯)</p>
                         <p><strong>【路線 2】</strong>南海機場線 ➔ 天下茶屋轉高野線 ➔ 今宮戎站 (步行 270m)</p>
                     </div>
                 </div>
@@ -466,7 +467,7 @@
             <div class="app-card p-4 space-y-4">
                 <div class="border-b pb-3">
                     <h2 class="font-bold text-slate-800 text-base flex items-center gap-1.5">
-                        <i class="fa-solid fa-hotel text-amber-500"></i> ESLEAD HOTELNAMBA SOUTH II 
+                        <i class="fa-solid fa-hotel text-amber-500"></i>  ESLEAD HOTELNAMBA SOUTH II 
                     </h2>
                     <p class="text-xs text-slate-500 mt-1">📍 2-7-22 Ebisunishi, Naniwa-ku, Osaka City, Osaka Prefecture 556-0003</p>
                     <p class="text-xs text-blue-600 font-semibold mt-0.5">📞 +81 080-3259-3409</p>
@@ -588,42 +589,37 @@
         <section id="section-luggage" class="main-section hidden space-y-4">
             <!-- 行李互動清單卡片 -->
             <div class="app-card p-4 space-y-4">
-                <h2 class="font-bold text-slate-800 text-base flex items-center gap-1.5 border-b pb-2">
-                    <i class="fa-solid fa-list-check text-emerald-500"></i> 行李準備 Check
-                </h2>
+                <div class="flex justify-between items-center border-b pb-2">
+                    <h2 class="font-bold text-slate-800 text-base flex items-center gap-1.5">
+                        <i class="fa-solid fa-list-check text-emerald-500"></i> 行李準備 Check
+                    </h2>
+                    <span id="luggage-progress" class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">已完成 0 / 0</span>
+                </div>
 
-                <div class="space-y-3 text-xs">
+                <div class="space-y-4 text-xs">
                     <div>
-                        <div class="font-bold text-slate-700 mb-1.5 text-xs text-emerald-600">🎒 隨身行李箱</div>
-                        <div class="space-y-2 bg-slate-50 p-3 rounded-xl">
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-emerald-500 w-4 h-4"> 護照 (6個月以上效期)</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-emerald-500 w-4 h-4"> 日幣 / 台幣 / 信用卡</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-emerald-500 w-4 h-4"> 手機/行動電源/充電線/耳機</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-emerald-500 w-4 h-4"> 面紙 / 濕紙巾</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-emerald-500 w-4 h-4"> 遙控器/水壺/帽子/外套/零食</label>
+                        <div class="font-bold text-slate-700 mb-2 text-xs text-emerald-600 flex items-center gap-1">
+                            <i class="fa-solid fa-backpack"></i> 隨身行李箱
                         </div>
+                        <ul id="list-carryon" class="space-y-2 pl-1 text-slate-600 bg-slate-50 p-3 rounded-xl">
+                            <!-- 動態生成或互動項目 -->
+                        </ul>
                     </div>
 
                     <div>
-                        <div class="font-bold text-slate-700 mb-1.5 text-xs text-blue-600">🧳 託運行李箱</div>
-                        <div class="space-y-2 bg-slate-50 p-3 rounded-xl">
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-blue-500 w-4 h-4"> 充電器 / 熱水壺</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-blue-500 w-4 h-4"> 隱形眼鏡 / 眼鏡 / 夾子</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-blue-500 w-4 h-4"> 大人與小孩換洗衣物 / 睡衣 / 襪子</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-blue-500 w-4 h-4"> 盥洗用品 / 免洗毛巾 / 牙膏牙刷</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-blue-500 w-4 h-4"> 備用藥品 (成人 & 兒童) / 止癢藥</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-blue-500 w-4 h-4"> 兒童餐具 / 奶粉奶瓶 / 益生菌</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-blue-500 w-4 h-4"> 保養品 / 指甲刀 / 自拍棒</label>
+                        <div class="font-bold text-slate-700 mb-2 text-xs text-blue-600 flex items-center gap-1">
+                            <i class="fa-solid fa-suitcase-rolling"></i> 託運行李箱
                         </div>
+                        <ul id="list-checked" class="space-y-2 pl-1 text-slate-600 bg-slate-50 p-3 rounded-xl">
+                        </ul>
                     </div>
 
                     <div>
-                        <div class="font-bold text-slate-700 mb-1.5 text-xs text-purple-600">📄 重要憑證與文件</div>
-                        <div class="space-y-2 bg-slate-50 p-3 rounded-xl">
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-purple-500 w-4 h-4"> 身份證 / 護照影本</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-purple-500 w-4 h-4"> 訂房憑證 / 環球影城門票</label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="rounded text-purple-500 w-4 h-4"> 2吋大頭照 * 2</label>
+                        <div class="font-bold text-slate-700 mb-2 text-xs text-purple-600 flex items-center gap-1">
+                            <i class="fa-solid fa-file-lines"></i> 重要憑證與文件
                         </div>
+                        <ul id="list-docs" class="space-y-2 pl-1 text-slate-600 bg-slate-50 p-3 rounded-xl">
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -721,6 +717,95 @@
             if (selectedContent) selectedContent.classList.remove('hidden');
         }
 
+        // 行李互動清單初始化與狀態儲存
+        const luggageData = {
+            carryon: [
+                "護照 (6個月以上效期)",
+                "日幣 / 台幣 / 信用卡",
+                "手機 / 行動電源 / 耳機",
+                "面紙 / 濕紙巾",
+                "自拍棒的遙控器",
+                "帽子 / 外套",
+                "水壺 / 零食"
+            ],
+            checked: [
+                "充電器 / 充電線",
+                "熱水壺",
+                "隱形眼鏡 / 眼鏡 / 夾子",
+                "大人與小孩換洗衣物 / 睡衣 / 襪子",
+                "盥洗用品 / 免洗毛巾 / 牙膏牙刷",
+                "備用藥品 (成人 & 兒童)",
+                "兒童餐具 / 奶粉奶瓶 / 益生菌",
+                "保養品",
+                "指甲刀",
+                "自拍棒"
+            ],
+            docs: [
+                "身份證 / 護照 (影本/電子檔)",
+                "訂房憑證 (影本/電子檔)",
+                "環球影城門票 (影本/電子檔)",
+                "2吋大頭照*2 (電子檔)"
+            ]
+        };
+
+        function initLuggageList() {
+            const savedState = JSON.parse(localStorage.getItem('osaka2026_luggage')) || {};
+
+            renderCategory('list-carryon', luggageData.carryon, savedState, 'carryon');
+            renderCategory('list-checked', luggageData.checked, savedState, 'checked');
+            renderCategory('list-docs', luggageData.docs, savedState, 'docs');
+            updateLuggageProgress();
+        }
+
+        function renderCategory(containerId, items, savedState, categoryKey) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            container.innerHTML = '';
+
+            items.forEach((item, index) => {
+                const uniqueId = `${categoryKey}_${index}`;
+                const isChecked = savedState[uniqueId] || false;
+
+                const li = document.createElement('li');
+                li.className = "flex items-center gap-2.5 cursor-pointer py-1 select-none";
+                li.onclick = () => toggleLuggageItem(uniqueId);
+
+                li.innerHTML = `
+                    <input type="checkbox" id="${uniqueId}" ${isChecked ? 'checked' : ''} class="w-4 h-4 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500 cursor-pointer pointer-events-none">
+                    <span class="${isChecked ? 'line-through text-slate-400' : 'text-slate-700'} transition-colors">${item}</span>
+                `;
+                container.appendChild(li);
+            });
+        }
+
+        function toggleLuggageItem(uniqueId) {
+            const savedState = JSON.parse(localStorage.getItem('osaka2026_luggage')) || {};
+            savedState[uniqueId] = !savedState[uniqueId];
+            localStorage.setItem('osaka2026_luggage', JSON.stringify(savedState));
+
+            initLuggageList();
+        }
+
+        function updateLuggageProgress() {
+            const savedState = JSON.parse(localStorage.getItem('osaka2026_luggage')) || {};
+            const total = luggageData.carryon.length + luggageData.checked.length + luggageData.docs.length;
+            let checkedCount = 0;
+
+            Object.values(savedState).forEach(val => {
+                if (val) checkedCount++;
+            });
+
+            const progressBadge = document.getElementById('luggage-progress');
+            if (progressBadge) {
+                progressBadge.innerText = `已完成 ${checkedCount} / ${total}`;
+            }
+        }
+
+        // 頁面載入時初始化行李清單
+        document.addEventListener('DOMContentLoaded', () => {
+            initLuggageList();
+        });
+
         // 複製文字功能與 Toast 彈窗
         function copyText(text) {
             if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -754,7 +839,7 @@
             modal.classList.add('hidden');
         }
 
-        // 出發倒數計時器
+        // 出發倒數計時器 (包含天、時、分、秒)
         const targetDate = new Date('2026-11-04T07:40:00').getTime();
         setInterval(() => {
             const now = new Date().getTime();
@@ -762,8 +847,11 @@
 
             if (difference > 0) {
                 const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                document.getElementById('countdown').innerText = `${days}天${hours}時`;
+                const hours = String(Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                const minutes = String(Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+                const seconds = String(Math.floor((difference % (1000 * 60)) / 1000)).padStart(2, '0');
+                
+                document.getElementById('countdown').innerText = `${days}天 ${hours}:${minutes}:${seconds}`;
             } else {
                 document.getElementById('countdown').innerText = "旅程進行中🎉";
             }
